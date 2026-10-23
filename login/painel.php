@@ -17,6 +17,6 @@ if(!isset($_SESSION['usuario'])) {
 <body>
     <h1>Bem-vindo, <?= htmlspecialchars($_SESSION['usuario']) ?></h1>
     <p>Esse é o painel logado.</p>
-    <a href="logout.php">Sair</a>
+    <a href="sair.php">Sair</a>
 </body>
 </html>

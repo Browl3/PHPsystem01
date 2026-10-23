@@ -1,19 +1,22 @@
 <?php
+
+
 session_start();
+
 $mensagem = "";
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $usuario = $_POST["usuario"];
     $senha   = $_POST["senha"];
 
     if ($usuario === "admin" && $senha === "1234") {
-        $_SESSION["usuario"] = $usuario;
-        header("Location: painel.php");
-        exit;
+        $mensagem = "Login correto!";
     } else {
         $mensagem = "Usuário ou senha incorretos.";
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,3 +35,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </form>   
 </body>
 </html>
+
+
