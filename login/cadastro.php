@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mensagem = "Esse usuario ja existe";
     }else {
         $usuarios[$usuario] = password_hash($senha, PASSWORD_DEFAULT);
-        file_get_contents("usuarios.json", json_encode($usuarios));
+        file_put_contents("usuarios.json", json_encode($usuarios));
         $mensagem = "conta criada com sucesso!";
     }
 }?>
